@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+input[type=text] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+    input[type=email] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=tel] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+    a {
+        text-decoration: none;
+        background-color:blue;
+        color: black;
+        width: 35px;
+        height: 40px;
+        font-size: 30px;
+        border-radius: 10%;
+    }
+
+</style>
+    <script>
+    function myFunction(){
+        
+        document.getElementById("demo1").innerHTML = document.getElementById("fname").value;
+        document.getElementById("demo2").innerHTML = document.getElementById("lname").value;
+        document.getElementById("demo3").innerHTML = document.getElementById("email").value;
+        document.getElementById("demo4").innerHTML = document.getElementById("tel").value;
+    }
+         function myFunction1(){
+        
+         document.getElementById("fname").value = "";
+         document.getElementById("demo1").innerHTML = document.getElementById("fname").value;                  
+         document.getElementById("lname").value = "";
+         document.getElementById("demo2").innerHTML = document.getElementById("lname").value;
+        
+         document.getElementById("email").value = "";
+         document.getElementById("demo3").innerHTML = document.getElementById("email").value;
+        
+         document.getElementById("tel").value = "";
+         document.getElementById("demo4").innerHTML = document.getElementById("tel").value;
+    }
+
+    </script>
+</head>
+<body>
+    
+<a href="index.html" class="btn btn-info" role="button" target="_self" >Home </a>
+
+<p>Please put your information:</p>
+
+
+  <label for="fname">First Name</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last Name</label><br>
+  <input type="text" id="lname" name="lname"><br>
+    <label for="email">E-mail</label><br>
+  <input type="email" id="email" name="email"><br>
+    <label for="tel">Phone No</label><br>
+  <input type="tel" id="tel" name="tel"><br><br>
+    <button onclick="myFunction()">push</button>
+    <button onclick="myFunction1()">Reset</button>
+<br>
+    <h2> You have entered:</h2><br>
+    <h4>First Name:</h4>
+    <p id="demo1"></p><br>
+    <h4>Last Name:</h4>
+    <p id="demo2"></p><br>
+    <h4>E-mail:</h4>
+    <p id="demo3"></p><br>
+    <h4>Phone No:</h4>
+    <p id="demo4"></p><br>
+</body>
+</html>
